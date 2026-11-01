@@ -4,18 +4,18 @@ import { Hero } from '@/components/hero'
 import { CvLetter, InstrumentsLetter, ProjectsLetter, PublicationsLetter } from '@/components/letters'
 import { PlotBackground } from '@/components/plot-background'
 import { SiteHeader } from '@/components/site-header'
-import { instruments, journalArticles, profile, projects } from '@/lib/profile-data'
+import { instruments, journalArticles, manuscripts, profile, projects } from '@/lib/profile-data'
 
 export default function Page() {
   const envelopes: EnvelopeItem[] = [
     {
       id: 'publications',
       label: 'Research Papers',
-      caption: `${journalArticles.length} journal articles`,
+      caption: `${journalArticles.length} published · ${manuscripts.length} in progress`,
       icon: 'publications',
       content: <PublicationsLetter />,
     },
-    { id: 'cv', label: 'CV', caption: 'Positions & education', icon: 'cv', content: <CvLetter /> },
+    { id: 'cv', label: 'CV', caption: 'Experience, education & awards', icon: 'cv', content: <CvLetter /> },
     {
       id: 'instruments',
       label: 'Instruments',
